@@ -59,9 +59,9 @@ The OTA builds moved into a separate GitHub organization to get full GitHub acti
 With this, it is possible to add support for [devices discontinued lately](#2025030200) again 🥳.
 
 > ⚠️ You need to change the OTA server url in custota app to either  
-> https://rooted-graphene.github.io/ota/magisk  
+> https://zingyawesome.github.io/rooted-graphene-ota/magisk
 > or  
-> https://rooted-graphene.github.io/ota/rootless
+> https://zingyawesome.github.io/rooted-graphene-ota/rootless
 
 Note that the old URL https://schnatterer.github.io/rooted-graphene/ will no longer receive new OTAs soon.
 
@@ -201,7 +201,7 @@ Once GrapheneOS is installed
     ```bash
     fastboot reboot-bootloader
     fastboot erase avb_custom_key
-    curl -s https://raw.githubusercontent.com/rooted-graphene/ota/refs/heads/main/avb_pkmd.bin > avb_pkmd.bin
+    curl -s https://raw.githubusercontent.com/ZingyAwesome/rooted-graphene-ota/refs/heads/main/avb_pkmd.bin > avb_pkmd.bin
     fastboot flash avb_custom_key avb_pkmd.bin
     ```
 * **[Optional]** Before locking the bootloader, reboot into Android once to confirm that everything is properly signed.  
@@ -227,7 +227,7 @@ Once GrapheneOS is installed
 #### Set up OTA updates
 
 * [Disable system updater app](https://github.com/chenxiaolong/avbroot#ota-updates).
-* Open Custota app and set the OTA server URL to point to this OTA server: https://rooted-graphene.github.io/ota/magisk
+* Open Custota app and set the OTA server URL to point to this OTA server: https://zingyawesome.github.io/rooted-graphene-ota/magisk
 
 Alternatively you could do updates manually via `adb sideload`:
 * reboot the device and begin holding the volume down button until it boots up into the bootloader interface
@@ -241,12 +241,12 @@ Alternatively you could do updates manually via `adb sideload`:
 
 To remove root, you can change to the "rootless" flavor.
 
-To do so, set the following URL in custota: https://rooted-graphene.github.io/ota/rootless/
+To do so, set the following URL in custota: https://zingyawesome.github.io/rooted-graphene-ota/rootless
 And then upgrade.  
 (if custota should tell you that you're on the latest version, you can force an upgrade by long pressing `Version` and 
 then selecting `Allow reinstall`).
 
-If you want to gain root again, just switch back to this URL in custota: https://rooted-graphene.github.io/ota/magisk/
+If you want to gain root again, just switch back to this URL in custota: https://zingyawesome.github.io/rooted-graphene-ota/magisk
 And then upgrade.
 
 ## Magisk preinit strings
